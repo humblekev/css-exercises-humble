@@ -1,69 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-html, body {
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: Roboto, sans-serif;
-  margin: 0;
-  background: #aaa;
-  color: #333;
-  /* I'll give you this one for free lol */
+  font-family: 'Roboto', sans-serif;
+  background-color: #F9FAF8; /* Light background for the page body */
+  color: #1F2937;
+}
+
+/* Header & Navigation */
+header {
+  background-color: #1F2937;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.modal {
-  background: white;
-  width: 480px;
-  border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
-}
-
-.icon {
-  color: royalblue;
-  font-size: 26px;
+.logo {
+  font-size: 24px;
   font-weight: 700;
-  background: lavender;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
+  color: #F9FAF8;
+  /* "Header Logo Text" */
+}
+
+nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #E5E7EB; /* header link text color */
+  font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #1F2937; /* dark background color for hero */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 48px;       /* hero main text size */
+  font-weight: 900;      /* bold weight for hero title */
+  color: #F9FAF8;        /* #F9FAF8 hero main text color */
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 18px;       /* hero secondary text size */
+  color: #E5E7EB;        /* hero secondary text color */
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.hero-image {
+  background-color: #E5E7EB; /* placeholder "image" color */
+  width: 300px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #1F2937;
+  font-size: 14px;
+  margin-left: 24px;
 }
 
-.close-button {
-  background: #eee;
-  border-radius: 50%;
-  color: #888;
-  font-weight: 400;
-  font-size: 16px;
-  height: 24px;
-  width: 24px;
+/* Info Section */
+.info {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 36px;
+  font-weight: 900; /* "information header text" */
+  color: #1F2937;
+  margin-bottom: 24px;
+}
+
+.info-cards {
   display: flex;
-  align-items: center;
   justify-content: center;
-  border: 1px solid #eee;
-  padding: 0;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-button {
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 8px;
-}
-
-button.continue {
-  background: royalblue;
-  border: 1px solid royalblue;
-  color: white;
-}
-
-button.cancel {
-  background: white;
+.card {
+  background-color: #F9FAF8;
   border: 1px solid #ddd;
-  color: royalblue;
+  width: 200px;
+  padding: 16px;
+}
+
+/* Quote Section */
+.quote-section {
+  background-color: #E5E7EB; /* quote section background color */
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.quote {
+  font-size: 36px;      /* 36px for the quote text */
+  font-style: italic;   /* italic text */
+  color: #1F2937;       /* #1F2937 text color */
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.author {
+  font-size: 18px;
+  color: #1F2937;
+}
+
+/* Call To Action */
+.call-to-action {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.call-to-action p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.call-to-action button {
+  background-color: #3882F6; /* button color */
+  color: #F9FAF8;            /* white text */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #1F2937;
+  padding: 16px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #E5E7EB;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin: 20px 0 0 0;
+  }
+  .info-cards {
+    flex-direction: column;
+  }
 }
